@@ -180,13 +180,17 @@ list(APPEND SUITESPARSE_CHECK_INCLUDE_DIRS
   /opt/local/include/ufsparse # Mac OS X
   /usr/local/homebrew/include # Mac OS X
   /usr/local/include
-  /usr/include)
+  /usr/include
+  "$ENV{SUITESPARSE_ROOT}/include"
+  )
 list(APPEND SUITESPARSE_CHECK_LIBRARY_DIRS
   /opt/local/lib
   /opt/local/lib/ufsparse # Mac OS X
   /usr/local/homebrew/lib # Mac OS X
   /usr/local/lib
-  /usr/lib)
+  /usr/lib
+  "$ENV{SUITESPARSE_ROOT}/lib"
+  )
 # Additional suffixes to try appending to each search path.
 list(APPEND SUITESPARSE_CHECK_PATH_SUFFIXES
   suitesparse) # Windows/Ubuntu
