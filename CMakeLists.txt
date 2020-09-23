@@ -112,9 +112,9 @@ include(UpdateCacheVariable)
 include(DetectBrokenStackCheckMacOSXcodePairing)
 detect_broken_stack_check_macos_xcode_pairing()
 
-# Set up the git hook to make Gerrit Change-Id: lines in commit messages.
-include(AddGerritCommitHook)
-add_gerrit_commit_hook(${Ceres_SOURCE_DIR} ${Ceres_BINARY_DIR})
+## Set up the git hook to make Gerrit Change-Id: lines in commit messages.
+#include(AddGerritCommitHook)
+#add_gerrit_commit_hook(${Ceres_SOURCE_DIR} ${Ceres_BINARY_DIR})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${Ceres_BINARY_DIR}/lib)
